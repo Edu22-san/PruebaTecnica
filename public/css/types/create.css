@@ -1,0 +1,42 @@
+.container {
+    max-width: 500px;
+  }
+
+  .error {
+    display: block;
+    padding-top: 5px;
+    font-size: 14px;
+    color: red;
+  }
+
+  ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: #142157;
+  }
+  
+  li {
+    float: left;
+  }
+  
+  li a {
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+  }
+  
+  li a:hover:not(.active) {
+    background-color: #111;
+  }
+  
+  .active {
+    background-color: #142157;
+  }
+  #title{
+    color: #f8f6ff;
+    padding-left: 10px;
+  }

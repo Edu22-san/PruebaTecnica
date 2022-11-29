@@ -35,7 +35,22 @@ $routes->set404Override();
 
 // We get a performance increase by specifying the default
 // route since we don't have to scan directories.
-$routes->get('/', 'Home::index');
+$routes->get('/', 'MachineController::viewMachine');
+$routes->get('/viewtype', 'TypeController::viewType');
+$routes->get('/createType', 'TypeController::createType');
+$routes->post('/create-type-action', 'TypeController::createActionType');
+$routes->get('edittype/(:num)', 'TypeController::update/$1');
+$routes->post('updateactiontype', 'TypeController::updateaction');
+$routes->get('deletetype/(:num)', 'TypeController::delete/$1');
+
+
+$routes->get('/viewmachine', 'MachineController::viewMachine');
+$routes->get('/createMachine', 'MachineController::createMachine');
+$routes->post('/create-machine-action', 'MachineController::createActionMachine');
+$routes->get('updateMachine/(:num)', 'MachineController::updateMachine/$1');
+$routes->post('updateMachine', 'MachineController::updateactionMachine');
+$routes->get('deleteMachine/(:num)', 'MachineController::delete/$1');
+
 
 /*
  * --------------------------------------------------------------------
